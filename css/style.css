@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hide-desktop{
+    display: none;
+    visibility: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2B2F38;
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav a {
+    background-color: #2B2F38;
+    color: #FFBD02;
+    padding: .5em;
+    font-size: .8em;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+area{
+    pointer-events: none !important;
+}
+
+img {
+    width: 100%;
+    height: 100vh;
+}
+
+.mobile {
+    display: none;
+}
+
+
+.box {
+    position: absolute;
+    background-color: rgba(28, 16, 16, 0.491);
+    animation-name: blink;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    z-index: 10;
+    opacity: .7;
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+
+
+@keyframes blink {
+    from {
+        opacity: .7;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .hide-mobile{
+        display: none;
+        visibility: hidden;
+    }
+
+    .hide-desktop{
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .img{
+    }
+    .rotate-wrap {
+        display: block;
+    }
+}
